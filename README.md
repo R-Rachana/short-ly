@@ -1,12 +1,12 @@
-#Short-ly - Full-Stack URL Shortener 
+# Short-ly - Full-Stack URL Shortener 
 
-##1. Project Overview
+## 1. Project Overview
 
 This is a complete, full-stack URL shortening service built from scratch to demonstrate proficiency in a modern, high-demand tech stack: React, TypeScript, Node.js, and Docker.
 
 The project mimics the core functionality of services like Bitly or TinyURL and serves as a practical, end-to-end example of modern software development, from the frontend UI to the backend API, database integration, and DevOps containerization.
 
-##2. The Problem & Goal
+## 2. The Problem & Goal
 
 This project was strategically built to fill a specific gap and showcase a unique combination of skills:
 
@@ -16,14 +16,14 @@ This project was strategically built to fill a specific gap and showcase a uniqu
 
 In short, this project was designed to be the most "bang-for-your-buck" portfolio piece, filling my biggest technical gap (Node.js/TypeScript) while simultaneously showcasing my biggest strength (DevOps).
 
-##3. Tech Stack
+## 3. Tech Stack
 
 * **Frontend:** React, TypeScript, Vite
 * **Backend:** Node.js, React, Vite
 * **Database:** PostgreSQL
 * **Containerization:** Docker & Docker Compose
 
-##4. Key Features & Implementation
+## 4. Key Features & Implementation
 
 This project is composed of three services working in concert, all defined in the docker-compose.yml file.
 
@@ -36,7 +36,7 @@ This project is composed of three services working in concert, all defined in th
     1. Persists all URL data.
     2. Is automatically initialized on its first run by an init.sql script, which creates the required urls table.
  
-##5. How to Run
+## 5. How to Run
 
 The entire stack can be built and run with one command.
 
@@ -51,7 +51,7 @@ The entire stack can be built and run with one command.
 2. **Build and Run the Containers:** docker-compose up --build -d
 3. Use the Application: Open your browser and navigate to http://localhost:8080.
 
-##6. Challenges & What I Learned
+## 6. Challenges & What I Learned
 
 This project was a fantastic exercise in system design and end-to-end debugging.
 
