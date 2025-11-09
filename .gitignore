@@ -1,0 +1,22 @@
+#this file tells get what to ignore
+
+### Node.js ###
+#ignore all node modules in the project
+node_modules/
+
+#ignore build output folders
+dist/
+
+#log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+### Personal ###
+# Environment variables
+.env 
+.env.local
+*.env
+
+### macOS ###
+.DS_Store

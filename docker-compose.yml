@@ -1,0 +1,43 @@
+# This file defines all the services for our application
+
+services:
+
+  # 1. The PostgreSQL Database Service
+  db: 
+    image: postgres
+    container_name: my-postgres-db-compose
+    restart: always
+    environment: 
+      POSTGRES_PASSWORD: mysecretpassword
+    ports: 
+      - "5432:5432" # Connect host port 5432 to container port 5432
+    volumes: 
+      # --- FIX ---
+      # The path was changed from ".../data" to just ".../postgresql"
+      # This is the new path required by modern Postgres images.
+      - postgres-data:/var/lib/postgresql 
+      - ./db-init/init.sql:/docker-entrypoint-initdb.d/init.sql  
+
+  # 2. The Backend Server Service
+  server: 
+    build: ./server
+    container_name: short-ly-server
+    restart: always
+    ports:
+      - "3001:3001" # Connect host port 3001 to container port 3001
+    depends_on:
+      - db # Tells this service to wait for the 'db' service to be running
+
+  # 3. The Frontend Client Service
+  client:
+    build: ./client
+    container_name: short-ly-client
+    restart: always
+    ports:
+      - "8080:80" # Connect host port 8080 to the Nginx container's port 80
+    depends_on: 
+      - server # Tells this service to wait for the 'server' to be running
+
+# This named volume is what saves your database data
+volumes:
+  postgres-data:
