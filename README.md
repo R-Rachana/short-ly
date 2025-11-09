@@ -16,7 +16,7 @@ Database: A PostgreSQL database for persistent storage of all URLs.
 
 Containerized: The entire stack (client, server, database) is managed by docker-compose for easy development and deployment.
 
-🛠 Tech Stack
+Tech Stack
 
 Frontend: React (Vite), JavaScript, CSS
 
@@ -26,7 +26,7 @@ Database: PostgreSQL
 
 Orchestration: Docker, Docker Compose
 
-🚀 How to Run
+How to Run
 
 This project is designed to be run with a single command.
 
@@ -64,7 +64,7 @@ server (Port 3001): The Node.js/Express backend API.
 
 db (Port 5432): The PostgreSQL database.
 
-📁 Project Structure
+Project Structure
 
 short-ly/
 ├── docker-compose.yml  # Defines all services, networks, and volumes
